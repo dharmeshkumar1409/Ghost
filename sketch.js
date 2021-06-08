@@ -55,7 +55,7 @@ function draw() {
     background("grey");
 
     if (gameState === PLAY) {
-        bg.velocityX = -(6 + 4 * score / 10);
+        bg.velocityX = -(6 + 4 * score / 5);
 
         if (bg.x < 0) {
             bg.x = bg.width / 2;
@@ -102,8 +102,8 @@ function spawnSpikes() {
         // spikes.debug = true;
         spikes.setCollider("circle", 0, 0, 380);
         spikes.velocityX = -5;
-        spikes.y = Math.round(random(20, 350));
-        spikes.velocityX = -(6 + 5 * score / 10);
+        spikes.y = Math.round(random(20, 380));
+        spikes.velocityX = -(6 + 5 * score / 5);
         spikes.lifetime = 300;
         spikeGroup.add(spikes);
     }
